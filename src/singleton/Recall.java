@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 public class Recall {
     private static Recall instance;

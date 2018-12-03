@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 public class SingletonDemo01 {
     // 类初始化时立刻加载
