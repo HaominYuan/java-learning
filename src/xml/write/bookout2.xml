@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+  <book url="b01">
+    <name>第七天</name>
+    <author>余华</author>
+    <price>50</price>
+  </book>
+</books>
