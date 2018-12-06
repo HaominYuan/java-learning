@@ -9,14 +9,14 @@ public class Demo {
         var i = 10;
         var str = "abc";
         var list = new ArrayList<>();
-        list.add("list test java10newfeature.var");
+        list.add("list test1 java10newfeature.var");
         var set = new HashSet<>();
         set.add("set text java10newfeature.var");
         var map = new HashMap<>();
-        map.put("test", "map test java10newfeature.var");
+        map.put("test1", "map test1 java10newfeature.var");
         var user = new User();
         user.setAge(20);
-        user.setName("user test java10newfeature.var");
+        user.setName("user test1 java10newfeature.var");
         System.out.println(i);
         System.out.println(str);
         for (Object o : list) {
