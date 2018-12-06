@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 引入外部DTD文件 -->
+
+<!DOCTYPE persons SYSTEM "/Users/haominyuan/Desktop/java/javalearning/src/xml/read/scores.dtd">
+
+
+<persons>
+    <person sex="男" url="p1">
+        <name>张三</name>
+        <password>qwer</password>
+        <age>19</age>
+    </person>
+
+
+    <person sex="女" url="p2">
+        <name>李四</name>
+        <password>asdf</password>
+        <age>18</age>
+    </person>
+</persons>

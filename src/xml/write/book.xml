@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 这里是注释 -->
+<books>
+    <note>
+        xml一定要有声明。
+        xml只能有一个顶级标签。
+        xml是大小写敏感的。
+    </note>
+
+    <book url="bo1">
+        <name>平凡的世界</name>
+        <author>路遥</author>
+        <price>50.5</price>
+    </book>
+
+    <book url="bo2">
+        <name>第七天</name>
+        <author>余华</author>
+        <price>20.5</price>
+    </book>
+
+</books>

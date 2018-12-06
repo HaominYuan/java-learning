@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 常用控制符  ？表示0次或1词 ，* 表示 0次或多次 ，+ 表示1词或多次 ，默认表示1词-->
+<!ELEMENT persons (person+)>
+<!ELEMENT person ( name , password , age+) >
+
+<!-- ATTLIST 标签名 属性名 属性类型 属性性质 -->
+<!ATTLIST person sex  (男|女) #REQUIRED>
+<!ATTLIST person url  ID  #REQUIRED>
+
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
