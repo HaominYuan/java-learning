@@ -30,7 +30,7 @@ public class MyInvocationHandler implements InvocationHandler {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         Class<?>[] interfaces = s.getClass().getInterfaces();
         MyInvocationHandler h = new MyInvocationHandler(s);
-        Person proxy = (Person) Proxy.newProxyInstance(loader, interfaces, h);
+        reflect.Person proxy = (reflect.Person) Proxy.newProxyInstance(loader, interfaces, h);
         proxy.sayHello("yujie.wang", 20);
         proxy.sayGoodBye(true, 100);
         System.out.println("end");

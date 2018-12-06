@@ -1,52 +1,36 @@
 package reflect;
 
 
-import java.beans.IntrospectionException;
-import java.beans.PropertyDescriptor;
-import java.io.Serializable;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-class Person implements Serializable {
-    private String name;
-    private int age;
-
-    Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-}
-
-
 public class Test3 {
-    public static void main(String[] args) throws IntrospectionException, InvocationTargetException, IllegalAccessException {
-        Person person = new Person("袁浩民", 23);
-        Class clazz = person.getClass();
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
+        String path = "reflect.Person";
+        Class clazz = Class.forName(path);
 
-        Field[] fields = clazz.getDeclaredFields();
-        for (Field field : fields) {
-            String key = field.getName();
-            PropertyDescriptor descriptor = new PropertyDescriptor(key, clazz);
-            Method method = descriptor.getReadMethod();
-            Object value = method.invoke(person);
-            System.out.println(key + ":" + value);
-        }
+        // javabean一定要加一个无参构造器并且不能为private，调用无参构造器
+        Person person = (Person) clazz.getDeclaredConstructor().newInstance();
+        System.out.println(person);
+
+        // 调用有参构造器获得对象，最后获取属性
+        person = (Person) clazz.getDeclaredConstructor(String.class, int.class).newInstance("yhm", 20);
+        System.out.println(person.getName());
+        System.out.println(person.getAge());
+
+        // 通过反射api调用方法
+        Method method = clazz.getDeclaredMethod("setName", String.class);
+        method.invoke(person, "mhy");
+        method = clazz.getDeclaredMethod("getName");
+        System.out.println(method.invoke(person));
+
+
+        // 通过反射操作属性，私有属性可以通过setAccessible方法使他可以被操作。并且禁止访问检查后可以加快反射的调用
+        Field field = clazz.getDeclaredField("name");
+        field.setAccessible(true);
+        field.set(person, "qwe");
+        System.out.println(field.get(person));
     }
 }
