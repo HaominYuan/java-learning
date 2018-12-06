@@ -12,7 +12,7 @@ public class SocketChannelDemo {
         System.out.println(socketChannel.isConnected());
         System.out.println(socketChannel.finishConnect());
         ByteBuffer buf = ByteBuffer.allocate(48);
-        System.out.println(socketChannel.read(buf));
+        socketChannel.configureBlocking(false);
         while (socketChannel.read(buf) == -1) {
             System.out.println(2);
             buf.flip();
