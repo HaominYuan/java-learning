@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
 
-public class TestNum {
+public class TestUrl {
     private static String driver;
     private static String url;
     private static String user;
@@ -36,11 +36,11 @@ public class TestNum {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         List<Url> list = selAll();
-        writeNumtwoXml(list);
+        writeNumToXml(list);
     }
 
 
-    private static void writeNumtwoXml(List<Url> list) throws IOException {
+    private static void writeNumToXml(List<Url> list) throws IOException {
         Document document = DocumentHelper.createDocument();
         Element nums = document.addElement("urls");
         for (Url num : list) {
@@ -75,8 +75,7 @@ public class TestNum {
 
     private static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName(driver);
-        return DriverManager.getConnection(url + "&user=" + user + "&password=" + password);
+        return DriverManager.getConnection(url, user, password);
     }
-
 
 }
