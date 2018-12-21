@@ -14,13 +14,14 @@ public class Read {
         // 获取根元素
         Element root = document.getRootElement();
         // 获取子元素
+        System.out.println(root.elements().getClass());
         for (var temp : root.elements()) {
             // 获取元素的属性
-            System.out.println(temp.attribute("id"));
-            System.out.println(temp.attribute("sex"));
-            Element name = temp.element("name");
-            Element password = temp.element("password");
-            Element age = temp.element("age");
+            System.out.println(((Element) temp).attribute("id"));
+            System.out.println(((Element) temp).attribute("sex"));
+            Element name = ((Element) temp).element("name");
+            Element password = ((Element) temp).element("password");
+            Element age = ((Element) temp).element("age");
             System.out.println(name.getText());
             System.out.println(password.getText());
             System.out.println(age.getText());
