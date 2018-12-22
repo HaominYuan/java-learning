@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 运行时常量池溢出异常
- * VM Args: -XX:PermSize=10M -XX:MaxPermSize=10M
+ *
  */
 
 public class RuntimeConstantPoolOOM {

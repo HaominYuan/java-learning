@@ -6,7 +6,8 @@ import java.lang.reflect.Field;
 
 
 /**
- * VM Args: -Xmx20M -XX:MaxDirectMemorySize=10M
+ * VM Args: -Xmx20M -XX:MaxDirectMemorySize=10M -XX:+HeapDumpOnOutOfMemoryError
+ * 这里用的是Native Memory
  */
 
 public class DirectMemory {

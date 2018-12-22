@@ -7,7 +7,7 @@ package 深入理解JAVA虚拟机.自动内存管理机制;
 public class JavaVMStackSOF {
     private int stackLength = 1;
 
-    public void stackLeak() {
+    private void stackLeak() {
         stackLength = stackLength + 1;
         stackLeak();
     }
