@@ -1,10 +1,7 @@
-package 深入理解JAVA虚拟机.自动内存管理机制;
+package 深入理解JAVA虚拟机.Java内存区域与内存溢出异常;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
-import net.sf.cglib.proxy.MethodProxy;
-
-import java.lang.reflect.Method;
 
 /**
  * VM Args: -XX:PermSize=10M -XX:MaxPermSize=10M

@@ -1,4 +1,4 @@
-package 深入理解JAVA虚拟机.自动内存管理机制;
+package 深入理解JAVA虚拟机.Java内存区域与内存溢出异常;
 
 import java.util.ArrayList;
 import java.util.List;
