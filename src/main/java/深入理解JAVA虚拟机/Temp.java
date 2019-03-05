@@ -6,11 +6,15 @@ import java.util.List;
 
 public class Temp {
     public static void main(String[] args) {
-//        List<String> list = new ArrayList<>();
-//        while (true) {
-//            list.add(System.currentTimeMillis() + "");
-//        }a
+        int[] a = new int[10];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (int) (Math.random() * 100);
+        }
 
-        System.out.println(Arrays.toString("11".split("-")));
+        for (int gap = a.length / 2; gap > 0; gap = gap / 2) {
+            for (int i = gap; i < a.length; i++) {
+                
+            }
+        }
     }
 }
