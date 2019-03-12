@@ -1,10 +1,8 @@
-import java10newfeature.var.User;
-
-import java.lang.management.ManagementFactory;
-import java.lang.reflect.Proxy;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
 public class Test {
     public static void main(String[] args) {
-
+        ThreadFactory factory = Executors.defaultThreadFactory();
     }
 }
